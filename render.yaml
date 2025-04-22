@@ -1,7 +1,6 @@
 services:
   - type: web
     name: simulador-back
-    env: java
     plan: free
     region: oregon
     buildCommand: ./mvnw clean install
@@ -15,4 +14,3 @@ services:
         value: neondb_owner
       - key: SPRING_DATASOURCE_PASSWORD
         value: npg_Qvd9BnO6eXcE
-
