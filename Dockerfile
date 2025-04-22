@@ -1,7 +1,6 @@
 # Etapa 1: Usar a imagem base
 FROM openjdk:21-jdk-slim
 
-
 # Etapa 2: Definir o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
@@ -18,5 +17,4 @@ RUN ./mvnw clean install -DskipTests
 EXPOSE 8080
 
 # Etapa 7: Definir o comando para rodar a aplicação
-CMD ["java", "-jar", "target/*.jar"]
-
+CMD ["java", "-jar", "target/simulador-0.0.1-SNAPSHOT.jar"]
