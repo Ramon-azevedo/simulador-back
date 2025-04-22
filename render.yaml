@@ -3,9 +3,9 @@ services:
     name: simulador-back
     plan: free
     region: oregon
-    buildCommand: ./mvnw clean install
-    startCommand: java -jar target/*.jar
-    autoDeploy: true
+    buildCommand: ./mvnw clean install  # Comando para compilar o projeto usando Maven
+    startCommand: java -jar target/*.jar  # Comando para iniciar o seu app Spring Boot
+    autoDeploy: true  # Habilita o deploy automático
     envVars:
       - key: SPRING_DATASOURCE_URL
         value: jdbc:postgresql://ep-damp-flower-acipxo0w-pooler.sa-east-1.aws.neon.tech:5432/simulador?sslmode=require
@@ -13,9 +13,3 @@ services:
         value: neondb_owner
       - key: SPRING_DATASOURCE_PASSWORD
         value: npg_Qvd9BnO6eXcE
-    runtime: docker
-    docker:
-      image: "openjdk:17-jdk-alpine" # Usando a imagem Docker correta para Java
-      buildCommand: ./mvnw clean install
-      startCommand: java -jar target/*.jar
-
