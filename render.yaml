@@ -6,7 +6,6 @@ services:
     buildCommand: ./mvnw clean install
     startCommand: java -jar target/*.jar
     autoDeploy: true
-
     envVars:
       - key: SPRING_DATASOURCE_URL
         value: jdbc:postgresql://ep-damp-flower-acipxo0w-pooler.sa-east-1.aws.neon.tech:5432/simulador?sslmode=require
@@ -14,3 +13,4 @@ services:
         value: neondb_owner
       - key: SPRING_DATASOURCE_PASSWORD
         value: npg_Qvd9BnO6eXcE
+    runtime: java
